@@ -1,7 +1,10 @@
 apiVersion: run.googleapis.com/v1
 kind: Job
 metadata:
-  name: JOB
+  name: dev
+  annotations: {}
+  labels: {}
+description: dev
 spec:
   template:
     spec:
