@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/credible-art-418518/quickstart-image:latest
+        - image: gcr.io/credible-art-418518/batchrun-image:latest
           # Replace PROJECT_ID with your GCP project ID
           # Replace IMAGE_NAME with the name of your container image
           # Replace TAG with the version tag of your container image
