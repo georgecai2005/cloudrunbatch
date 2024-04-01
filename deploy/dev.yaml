@@ -7,4 +7,3 @@ spec:
     spec:
       containers:
         - image: gcr.io/credible-art-418518/batchrun-image:latest
-
