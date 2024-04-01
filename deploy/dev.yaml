@@ -6,4 +6,4 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/credible-art-418518/batchrun-image:latest
+        - image: gcr.io/credible-art-418518/gke-repo/batchrun-image:latest
