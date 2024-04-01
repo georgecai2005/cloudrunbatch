@@ -1,9 +1,11 @@
-apiVersion: serving.knative.dev/v1
-kind: Service
+apiVersion: run.googleapis.com/v1
+kind: Job
 metadata:
-  name: myservice
+  name: JOB
 spec:
   template:
     spec:
-      containers:
-      - image: us-central1-docker.pkg.dev/credible-art-418518/gke-repo/batchrun-image:latest
+      template:
+        spec:
+          containers:
+          - image: us-central1-docker.pkg.dev/credible-art-418518/gke-repo/batchrun-image:latest
