@@ -1,9 +1,9 @@
-apiVersion: deploy.cloud.google.com/v1
+apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: my-service
+  name: myservice
 spec:
   template:
     spec:
       containers:
-        - image: gcr.io/credible-art-418518/gke-repo/batchrun-image:latest
+      - image: gcr.io/credible-art-418518/gke-repo/batchrun-image:latest
