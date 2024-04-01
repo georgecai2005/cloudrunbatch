@@ -14,13 +14,13 @@ steps:
     args:
       - run
       - deploy
-      - 'myservice'
+      - $_SERVICE_NAME
       - '--image'
-      - 'us-central1-docker.pkg.dev/credible-art-418518/gke-repo/batchrun-image:latest'
+      - '$_AR_HOSTNAME/$_PROJECT_ID/$_AR_REPO/$_SERVICE_NAME:$COMMIT_SHA'
       - '--region'
-      - 'us-central1'
+      - $_DEPLOY_REGION
       - '--platform'
-      - 'managed'
+      - $_PLATFORM
     entrypoint: gcloud
 
 - name: 'google/cloud-sdk:latest'
@@ -30,7 +30,6 @@ steps:
   - -c
   - |
     gcloud deploy apply --file deploy/pipeline.yaml --region=us-central1
-    gcloud deploy apply --file deploy/dev.yaml --region=us-central1
     gcloud deploy releases create 'app-release-${SHORT_SHA}' --delivery-pipeline=run-cicd-pipeline --region=us-central1 --skaffold-file=skaffold.yaml
 
 
