@@ -10,7 +10,7 @@ steps:
   args: ['push', 'us-central1-docker.pkg.dev/credible-art-418518/gke-repo/batchrun-image' ]
   id: 'Push Docker Image'
 
-- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - run
       - deploy
