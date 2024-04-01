@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+build:
+  artifacts:
+    - image: gcr.io/credible-art-418518/quickstart-image
+      # Replace PROJECT_ID with your GCP project ID
+      # Replace IMAGE_NAME with the name of your container image
+      jibMaven: {}
+deploy:
+  kubectl:
+    manifests:
+      - deploy/dev.yaml
