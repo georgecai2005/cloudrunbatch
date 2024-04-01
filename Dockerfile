@@ -23,7 +23,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /usr/src/app
 
 # Copy the JAR file from the build stage
-COPY --from=build /usr/src/app/target/*.jar app.jar
+COPY --from=build /usr/src/app/target/gs-maven-0.1.0.jar app.jar
 
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
