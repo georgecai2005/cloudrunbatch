@@ -1,3 +1,10 @@
-FROM openjdk:8-jre-alpine
-COPY target/gs-maven-0.1.0.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:11-jre-slim
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the JAR file into the container
+COPY ./app.jar app.jar
+
+# Command to run the application
+CMD ["java", "-jar", "app.jar"]
