@@ -21,6 +21,7 @@ steps:
     - $_DEPLOY_REGION
     - '--platform'
     - $_PLATFORM
+    - '--job'
   entrypoint: gcloud
 
 - name: 'google/cloud-sdk:latest'
