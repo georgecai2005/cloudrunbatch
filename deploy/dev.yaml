@@ -1,20 +1,10 @@
-apiVersion: serving.knative.dev/v1
+apiVersion: run.googleapis.com/v1
 kind: Service
 metadata:
-  name: my-java-service
+  name: my-service
 spec:
   template:
     spec:
       containers:
         - image: gcr.io/credible-art-418518/batchrun-image:latest
-          # Replace PROJECT_ID with your GCP project ID
-          # Replace IMAGE_NAME with the name of your container image
-          # Replace TAG with the version tag of your container image
-          resources:
-            limits:
-              cpu: 1000m
-              memory: 512Mi
-            requests:
-              cpu: 500m
-              memory: 256Mi
 
